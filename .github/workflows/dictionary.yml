@@ -18,6 +18,7 @@ jobs:
       - run: npm install
       - run: npm run sort
       - name: Commit dictionary cleanup
+        if: always()
         run: |
           git config --global user.name 'Alex Bucknall'
           git config --global user.email 'bucknalla@users.noreply.github.com'
