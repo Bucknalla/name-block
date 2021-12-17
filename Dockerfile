@@ -1,11 +1,11 @@
-FROM node:12-alpine
+FROM node:12-alpine as build
 
-WORKDIR /usr/app
-COPY lib lib
-COPY package.json .
-COPY VERSION .
-COPY data .
-
+WORKDIR /app
+COPY package.json lib/index.js VERSION ./
+COPY data ./data 
 RUN npm install
 
-CMD ["npm", "start"]
+FROM node:12-slim
+
+COPY --from=build /app /
+CMD ["index.js"]
