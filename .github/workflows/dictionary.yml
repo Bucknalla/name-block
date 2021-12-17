@@ -17,10 +17,11 @@ jobs:
           cache-dependency-path: package-lock.json
       - run: npm install
       - run: npm run sort
-      - name: Commit dictionary cleanup
+      - run: npx versionist
+      - name: Added version
         run: |
           git config --global user.name 'Alex Bucknall'
           git config --global user.email 'bucknalla@users.noreply.github.com'
-          git add \*.txt
-          git commit -m "Cleaned up dictionaries" || true
+          git add \*.txt \*.md package.json
+          git commit -m "versionist" || true
           git push || true
