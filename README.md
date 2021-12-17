@@ -1,59 +1,55 @@
-# balenablock-template
-**Template block enabling you to get started building balenablocks for your projects and fleets**
+# name-block
+
+**A balenaBlock for fun device renaming device**
 
 ## Highlights
 
-- **Example balenablock**: An example for you to start building your own balenablocks!
-- **Multi-arch Auto-publishing**: Pre-build images for your users' custom architectures using GitHub actions
-- **Self-documenting**: For nodejs express-based blocks, automatically generate [swagger.io](https://swagger.io/) documentation
+- **Bored of your device names?**: Let this block rename them for you!
+- **Loads of categories**: From rude names to pirates names, there's something for everyone!
+- **Contribute categories**: We're open to fun and entertaining categories, PRs are welcome!
 
 ## Setup and configuration
 
-Use this as standalone with the button below:
+Use this as standalone functionality with the button below:
 
-[![template block deploy with balena](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balenablocks/template)
+[![template block deploy with balena](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/bucknalla/name-block)
 
 Or add the following service to your `docker-compose.yml`:
 
 ```yaml
-version: "2.1"
+version: '2'
 services:
-  template:
-    restart: always
-    image: ghcr.io/balena-io-playground/balenablock-template:latest
-    ports:
-      - "80:3000"
+  name:
+    image: ghcr.io/bucknalla/name-block
+    restart: no # required to avoid container restarting indefinitely
+    labels:
+      io.balena.features.balena-api: 1 # required to use the balena API
+    environment:
+      CATEGORY: pirate # if not specified will default to season
+      DEBUG: name # not required unless debugging
 ```
-
-> If you want to use a webserver exposing a public facing page, you will need to remove the exposed port 80
 
 ## Documentation
 
-Head over to our [docs](https://balenablocks.io/template/docs/) for detailed installation and usage instructions, customization options and more!
+Head over to our [docs](https://github.bucknalla.io/name-block/docs/) for detailed installation and usage instructions, customization options and more!
 
 ## Motivation
 
-BalenaBlocks are drop-in chunks of functionality built to handle the basics and speed up how developers prototype their next big project.
-For example, you might use a block to quickly provide a [web browser](https://github.com/balenablocks/browser) to your project or maybe set up your device's [WiFi credentials](https://github.com/balenablocks/wifi-connect).
-Blocks are neither join-able like fleets nor fork-able like projects; they’re a resource for everyone to use when creating their own fleets, projects, proof of concepts and prototypes.
-This is a template repo to get you started working on your own balenaBlocks.
-Blocks should ideally be lightweight, simple to use and well documented docker images, pre-built for use alongside other services.
-From this template you should be ready to go with:
+After a while, balenaCloud-generated device names get boring... why not spice it up with some new categories!
 
-- GitHub actions for publishing multi-arch docker images for your blocks
-- Simple node.js REST server as a demonstration block
-- Self-documenting
-- `balena.yml` configuration file, required for publishing on the [balenaHub](hub.balena.io)
-- [landr](https://github.com/product-os/landr) compliant documentation
+- Rude
+- Pirate
+- Seasonal
+- More to come!
 
 ## Getting Help
 
-If you're having any problem, please [raise an issue](https://github.com/balenablocks/template/issues/new) on GitHub and we will be happy to help.
+If you're having any problem, please [raise an issue](https://github.com/bucknalla/name-block/issues/new) on GitHub and we will be happy to help.
 
 ## Contributing
 
-Do you want to help make balenablock-template better? Take a look at our [Contributing Guide](https://balenablocks.io/template/contributing). Hope to see you around!
+Do you want to help make name-block better? Take a look at our [Contributing Guide](https://github.bucknalla.io/name-block/contributing). Hope to see you around!
 
 ## License
 
-balenablock-template is free software, and may be redistributed under the terms specified in the [license](https://github.com/balenablockstemplate/blob/master/LICENSE).
+name-block is free software, and may be redistributed under the terms specified in the [license](https://github.com/bucknalla/name-block/blob/master/LICENSE).

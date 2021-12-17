@@ -1,0 +1,10 @@
+version: '2'
+services:
+  name:
+    image: ghcr.io/bucknalla/name-block
+    restart: no # required to avoid container restarting indefinitely
+    labels:
+      io.balena.features.balena-api: 1 # required to use the balena API
+    environment:
+      CATEGORY: pirate # if not specified will default to season
+      DEBUG: name # not required unless debugging
