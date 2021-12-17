@@ -1,6 +1,6 @@
 # name-block
 
-**A balenaBlock for fun device renaming device**
+**A balenaBlock for fun device renaming**
 
 ## Highlights
 
