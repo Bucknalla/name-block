@@ -26,6 +26,7 @@ services:
       io.balena.features.balena-api: 1 # required to use the balena API
     environment:
       CATEGORY: pirate # if not specified will default to season
+      URL: 'https://url-to-your-file/noun.txt,https://url-to-your-file/adj.txt' # formatted for noun.txt, adj.txt
       DEBUG: name # not required unless debugging
 ```
 
