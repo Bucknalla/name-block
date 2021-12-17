@@ -1,7 +1,7 @@
 FROM node:12-alpine as build
 
 WORKDIR /app
-COPY package.json lib/index.js VERSION ./
+COPY package.json lib/index.js ./
 COPY data ./data 
 RUN npm install
 
