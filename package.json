@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/bucknalla/name-block#readme",
   "dependencies": {
-    "balena-sdk": "^16.1.0"
+    "balena-sdk": "^16.1.0",
+    "debug": "^4.3.3"
   }
 }
