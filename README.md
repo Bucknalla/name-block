@@ -29,6 +29,9 @@ services:
       DEBUG: name # not required unless debugging
 ```
 
+If you don't like the name we've chosen for your device, you can navigate to the `device variables` tab on balenaCloud and delete the `NAME` variable.
+Restarting the name-block service will then prompt the block to generate a new name.
+
 ## Documentation
 
 Head over to our [docs](https://github.bucknalla.io/name-block/docs/) for detailed installation and usage instructions, customization options and more!

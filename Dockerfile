@@ -4,6 +4,7 @@ WORKDIR /usr/app
 COPY lib lib
 COPY package.json .
 COPY VERSION .
+COPY data .
 
 RUN npm install
 
