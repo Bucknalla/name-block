@@ -48,6 +48,7 @@ After a while, balenaCloud-generated device names get boring... why not spice it
 - Rude
 - Pirate
 - Seasonal
+- Custom URLs
 - More to come!
 
 ## Getting Help

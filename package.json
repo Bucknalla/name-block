@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "start": "node lib/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sort": "node scripts/sort.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
   "homepage": "https://github.com/bucknalla/name-block#readme",
   "dependencies": {
     "balena-sdk": "^16.1.0",
-    "debug": "^4.3.3"
+    "debug": "^4.3.3",
+    "glob": "^7.2.0"
   }
 }

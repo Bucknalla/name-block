@@ -1,18 +1,18 @@
-name: template
+name: name
 description: >-
-  Template block enabling you to get started building balenablocks for your projects and fleets.
-fleetcta: Template balenablock
+  Bored of boring balena device names? Why not make let us decide!
+fleetcta: name-block
 version: 0.0.1
 type: sw.application
 assets:
   repository:
     type: blob.asset
     data:
-      url: 'https://github.com/balenablocks/template'
+      url: "https://github.com/bucknalla/name-block"
   logo:
     type: blob.asset
     data:
-      url: 'https://raw.githubusercontent.com/balenablocks/template/main/docs/images/icon.png'
+      url: "https://raw.githubusercontent.com/bucknalla/name-block/master/docs/images/icon.png"
 data:
   defaultDeviceType: raspberrypi3
   supportedDeviceTypes:
