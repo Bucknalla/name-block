@@ -1,1 +1,25 @@
-# skip
+name: Build and publish container
+
+on:
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  ghr_pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "12"
+          cache: "npm"
+          cache-dependency-path: subdir/package-lock.json
+      - run: npm install
+      - run: npm run sort
+      - name: Commit dictionary cleanup
+        run: |
+          git config --global user.name 'Alex Bucknall'
+          git config --global user.email 'bucknalla@users.noreply.github.com'
+          git commit -am "Cleaned up dictionaries"
+          git push

@@ -1,6 +1,4 @@
 abominable
-cold
-chattering
 absolute-zero
 arctic
 bare
@@ -12,6 +10,7 @@ bleak
 blustery
 bored
 boring
+chattering
 chilling
 chilly
 clear
