@@ -1,6 +1,6 @@
 {
   "name": "name-block",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Bored of boring balena device names? Why not make let us decide!",
   "main": "lib/index.js",
   "scripts": {
@@ -24,5 +24,11 @@
     "balena-sdk": "^16.1.0",
     "debug": "^4.3.3",
     "glob": "^7.2.0"
+  },
+  "devDependencies": {
+    "versionist": "^6.6.3"
+  },
+  "versionist": {
+    "publishedAt": "2021-12-17T21:06:12.497Z"
   }
 }

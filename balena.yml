@@ -2,7 +2,7 @@ name: name
 description: >-
   Bored of boring balena device names? Why not make let us decide!
 fleetcta: name-block
-version: 0.0.1
+version: 0.1.0
 type: sw.application
 assets:
   repository:
@@ -12,7 +12,8 @@ assets:
   logo:
     type: blob.asset
     data:
-      url: "https://raw.githubusercontent.com/bucknalla/name-block/master/docs/images/icon.png"
+      url: "https://raw.githubusercontent.com/bucknalla/name-block/master/docs/images\
+        /icon.png"
 data:
   defaultDeviceType: raspberrypi3
   supportedDeviceTypes:
