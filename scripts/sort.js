@@ -8,7 +8,7 @@ const getDirectories = function (src, callback) {
 
 const sortList = function (list) {
     const words = list.split('\n');
-    const unique = Array.from(new Set(words))
+    const unique = Array.from(new Set(words)).map(name => name.toLowerCase());
     const sorted = unique.sort()
     return sorted;
 }
