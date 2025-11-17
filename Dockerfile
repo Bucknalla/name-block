@@ -1,11 +1,21 @@
-FROM node:12-alpine as build
+FROM golang:1.21-alpine AS build
 
 WORKDIR /app
-COPY package.json lib/index.js ./
-COPY data ./data 
-RUN npm install
+COPY go.mod go.sum* ./
+RUN go mod download
 
-FROM node:12-slim
+COPY main.go .
+COPY data ./data
 
-COPY --from=build /app /
-CMD ["index.js"]
+RUN CGO_ENABLED=0 GOOS=linux go build -o name-block main.go
+
+FROM alpine:latest
+
+RUN apk --no-cache add ca-certificates
+
+WORKDIR /root/
+
+COPY --from=build /app/name-block .
+COPY --from=build /app/data ./data
+
+CMD ["./name-block"]
